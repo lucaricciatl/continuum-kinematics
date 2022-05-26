@@ -1,0 +1,23 @@
+function adj = Ad(T)
+%ADJOINT compute adjoiint operator of a matrix
+%   computation of adjoint operator given matrix T 4x4 or a vector 1x6 . 
+%   Result is a matrix 6x6
+
+S = size(T) ;
+S1 = S(1) ;
+S2 = S(2) ;
+
+
+v = T_ni(1:3) ;
+
+w = T_ni(4:6) ;
+
+v_hat = hat(v) ;
+w_hat = hat(w) ;
+
+adj = [ w_hat v_hat ; zeros(3) w_hat ] ;
+
+end
+
+
+
